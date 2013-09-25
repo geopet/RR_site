@@ -7,6 +7,7 @@ group :development, :test do
 # Use mysql as the database for Active Record
   gem 'mysql2'
   gem 'rspec-rails', '~> 2.14.0.rc1'
+  gem 'guard-rspec', '2.5.0'
 end
 
 group :test do
@@ -14,6 +15,7 @@ group :test do
 # This gem allows me to simulate a user's interaction with this app using a natural English-like syntax together with selenium....
 # which is one of capybara's dependencies.
   gem 'capybara', '2.1.0'
+  gem 'webrat', '0.7.3'
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.0'
 end

@@ -1,14 +1,17 @@
-<!DOCTYPE html>
+<!Doctype html>
+
 <html>
-<head>
-  <title>RRProject</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+    <head>
+        <title>RR Project Coming Soon | <%= @title %></title>
+        <%= csrf_meta_tag %>
+    </head>
 
-<%= yield %>
+    <body>
+        <%= yield %>
+    </body>
 
-</body>
+
+
 </html>
+
+
