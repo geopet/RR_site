@@ -9,5 +9,7 @@ module ApplicationHelper
       "#{base_title} | #{@title}"
     end
   end
-
+  def logo
+    image_tag("RRMockLogo.png", :alt => "Logo Will Go Here", :class => "round")
+  end
 end
