@@ -3,7 +3,9 @@
 }
 
 body {
-    background: #C6D880;
+    background: red;
+    width: 100%;
+    min-height: 100%
 }
 
 header {
@@ -11,8 +13,9 @@ header {
 }
 
 header img {
+    white-space: nowrap;
     padding: 1em;
-    background: #006600;
+    background: gold;
 }
 
 section {
@@ -43,7 +46,7 @@ a:visited {
 nav {
     float: right;
     background: white;
-    padding-top: 10px;
+    padding-top: 50px;
     padding: 0 0.7em;
     white-space: nowrap;
 }
