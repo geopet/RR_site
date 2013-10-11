@@ -25,4 +25,6 @@ class User < ActiveRecord::Base #ActiveRecord is what Rails use to talk to a Dat
   validates :email, :presence   => true # This tests to make sure email is present.
   validates :email, :format     => { :with => email_regex }  # Makes sure email address is a valid email format.
   validates :email, :uniqueness => { :case_sensitive => false } # Makes sure the entered email address doesn't already exists.
+
+  has_secure_password
 end
