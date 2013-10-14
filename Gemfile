@@ -13,6 +13,7 @@ group :development, :test do
   # gem 'twitter-bootstrap-rails'
   gem 'bootstrap-sass', '2.3.2.0'
   gem 'bcrypt-ruby', '3.0.1'
+  # gem 'devise', '3.1.1'
 end
 
 group :test do

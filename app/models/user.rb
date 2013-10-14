@@ -11,20 +11,23 @@
 #  created_at :datetime
 #  updated_at :datetime
 #
-
 class User < ActiveRecord::Base #ActiveRecord is what Rails use to talk to a Database.
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
   # This sets it so the user can only edit their name and email.
   # Will not allow id, created_at and update_at to be modified in any way.
   attr_accessible :name, :email
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i # This expression is from rubular.com
+  
+  before_save {self.email = email.dowcase}
 
   # These are the validations for the testing.  All these validations are delcared in user_spec.rb.
-  validates :name,  :presence   => true # This tests to make sure name is present.
-  validates :name,  :length     => { :maximum => 50 } # This tests to make sure name is not longer then 50 characters.
+  validates :name,  :presence   => true, length: {maximum: 50} # This tests to make sure name is present & tests to make sure name is not longer then 50 characters.
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i # This expression is from rubular.com
   validates :email, :presence   => true # This tests to make sure email is present.
   validates :email, :format     => { :with => email_regex }  # Makes sure email address is a valid email format.
   validates :email, :uniqueness => { :case_sensitive => false } # Makes sure the entered email address doesn't already exists.
-
   has_secure_password
+  validates :password, length: {minimum: 6}
 end
