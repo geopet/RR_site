@@ -13,8 +13,8 @@ development:
   encoding: utf8
   database: RR_project_development
   pool: 5
-  username: RR_project
-  password: figgy
+  username: root
+  password:
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -25,8 +25,8 @@ test:
   encoding: utf8
   database: RR_project_test
   pool: 5
-  username: RR_project
-  password: figgy
+  username: root
+  password:
   socket: /tmp/mysql.sock
 
 production:

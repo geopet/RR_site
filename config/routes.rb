@@ -1,5 +1,7 @@
 RRProject::Application.routes.draw do
 
+  devise_for :users
+  devise_for :admins
   resources :users
   root 'pages#home'
 
